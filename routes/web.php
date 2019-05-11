@@ -14,7 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/teste', function () {
-    return view('home');
-});
-Route::get('/grafico', 'GraficoController@teste')->name('grafico');
+Route::get('/teste','GraficoController@ultimosdados');
+Route::post('/grafico', 'GraficoController@teste');
+//Route::get('/teste2', function () {
+//    return view('teste');
+//});

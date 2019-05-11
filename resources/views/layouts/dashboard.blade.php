@@ -33,6 +33,8 @@
             <!-- /.navbar-static-side -->
         </nav>
 
+
+ <?php foreach($dados as $key=>$value): ?>
         <div id="page-wrapper">
 
             <div class="col-sm-12">
@@ -45,14 +47,16 @@
                                         <i class="fa fa-comments fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">26</div>
-                                        <div>New Comments!</div>
+                                        <div class="huge"><h2><?php echo($value->temp) ?></h2></div>
+                                        <div>Temperatura</div>
                                     </div>
                                 </div>
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left" data-toggle="modal" data-target="#tmp" >
+                                        Grafico
+                                    </span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
@@ -67,14 +71,14 @@
                                         <i class="fa fa-tasks fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
-                                        <div>New Tasks!</div>
+                                        <div class="huge"><?php echo($value->umi) ?></div>
+                                        <div>Umidade</div>
                                     </div>
                                 </div>
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left" data-toggle="modal" data-target="#umi" >Grafico</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
@@ -89,14 +93,14 @@
                                         <i class="fa fa-shopping-cart fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">124</div>
-                                        <div>New Orders!</div>
+                                        <div class="huge"><?php echo($value->mp) ?></div>
+                                        <div>Material Particulado</div>
                                     </div>
                                 </div>
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left" data-toggle="modal" data-target="#mp" >Grafico</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
@@ -111,14 +115,182 @@
                                         <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">13</div>
-                                        <div>Support Tickets!</div>
+                                        <div class="huge"><?php echo($value->lpg) ?></div>
+                                        <div>LGP</div>
                                     </div>
                                 </div>
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left" data-toggle="modal" data-target="#lpg" >Grafico</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-comments fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo($value->fumo) ?></div>
+                                        <div>Fumaça</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left" data-toggle="modal" data-target="#fumo" >
+                                        Grafico
+                                    </span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-tasks fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo($value->co) ?></div>
+                                        <div>CO</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left" data-toggle="modal" data-target="#co" >Grafico</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-shopping-cart fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo($value->co2) ?></div>
+                                        <div>CO2</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left" data-toggle="modal" data-target="#co2" >Grafico</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-support fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo($value->nh4) ?></div>
+                                        <div>NH4</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left" data-toggle="modal" data-target="#nh4" >Grafico</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-comments fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo($value->tol) ?></div>
+                                        <div>Tolueno</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left" data-toggle="modal" data-target="#tol" >
+                                        Grafico
+                                    </span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-tasks fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo($value->ace) ?></div>
+                                        <div>Acetona</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left" data-toggle="modal" data-target="#ace" >Grafico</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-shopping-cart fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge"><?php echo($value->eta) ?></div>
+                                        <div>Etanol</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left" data-toggle="modal" data-target="#eta" >Grafico</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
@@ -127,20 +299,13 @@
                     </div>
                 </div>
             </div>
-            <form id="formulario">
-                <input type="text" id="campo">
-                <input type="submit" value="Enviar">
-            </form>
+         @yield('page_heading')
 
-                <div id="container" style="min-width: 310px;
-                    height: 400px;
-                    width: 600px;
-                    margin: 0 auto;">
-
-                </div>
 
             <!-- /#page-wrapper -->
         </div>
-    </div>
+     <?php endforeach; ?>
+
+ </div>
 @stop
 
