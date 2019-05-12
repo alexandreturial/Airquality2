@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="{{ mix("assets/stylesheets/styles.css") }}" />
 </head>
 <body>
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 
 	@yield('body')

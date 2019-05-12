@@ -35,8 +35,8 @@
 
 
  <?php foreach($dados as $key=>$value): ?>
-        <div id="page-wrapper">
-
+        <div id="page-wrapper" style="margin-top: 10px;">
+                <h2>Analises Realizadas</h2>
             <div class="col-sm-12">
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
@@ -306,6 +306,6 @@
         </div>
      <?php endforeach; ?>
 
- </div>
+ </div pad>
 @stop
 

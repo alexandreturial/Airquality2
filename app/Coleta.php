@@ -14,36 +14,36 @@ class Coleta extends Model
     ];
 
     public static function dados($teste){
-        if($teste['data'] == 1){
+        if($teste == 1){
             $dados = DB::table('coleta')->select('temp')->orderBy('id', 'DESC')->limit(1)->get();
-        }elseif($teste['data'] == 2){
+        }elseif($teste == 2){
             $dados = DB::table('coleta')->select('umi')->orderBy('id', 'DESC')->limit(1)->get();
 
-        }elseif($teste['data'] == 3){
+        }elseif($teste == 3){
             $dados = DB::table('coleta')->select('mp')->orderBy('id', 'DESC')->limit(1)->get();
 
-        }elseif($teste['data'] == 4){
+        }elseif($teste == 4){
             $dados = DB::table('coleta')->select('lpg')->orderBy('id', 'DESC')->limit(1)->get();
 
-        }elseif($teste['data'] == 5){
+        }elseif($teste == 5){
             $dados = DB::table('coleta')->select('fumo')->orderBy('id', 'DESC')->limit(1)->get();
 
-        }elseif($teste['data'] == 6){
+        }elseif($teste == 6){
             $dados = DB::table('coleta')->select('co')->orderBy('id', 'DESC')->limit(1)->get();
 
-        }elseif($teste['data'] == 7){
+        }elseif($teste == 7){
             $dados = DB::table('coleta')->select('co2')->orderBy('id', 'DESC')->limit(1)->get();
 
-        }elseif($teste['data'] == 8){
+        }elseif($teste == 8){
             $dados = DB::table('coleta')->select('nh4')->orderBy('id', 'DESC')->limit(1)->get();
 
-        }elseif($teste['data'] == 9){
+        }elseif($teste == 9){
             $dados = DB::table('coleta')->select('tol')->orderBy('id', 'DESC')->limit(1)->get();
 
-        }elseif($teste['data'] == 10){
+        }elseif($teste == 10){
             $dados = DB::table('coleta')->select('ace')->orderBy('id', 'DESC')->limit(1)->get();
 
-        }elseif($teste['data'] == 11){
+        }elseif($teste == 11){
             $dados = DB::table('coleta')->select('eta')->orderBy('id', 'DESC')->limit(1)->get();
 
         }
