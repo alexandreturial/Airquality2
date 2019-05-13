@@ -1,38 +1,6 @@
 @extends('layouts.plane')
 
 @section('body')
- <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ url ('') }}">Air Quality</a>
-            </div>
-            <!-- /.navbar-header -->
-
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li {{ (Request::is('/') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                        </li>
-                        <li {{ (Request::is('*charts') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('charts') }}"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
-                            <!-- /.nav-second-level -->
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
-        </nav>
-
 
  <?php foreach($dados as $key=>$value): ?>
         <div id="page-wrapper" style="margin-top: 10px;">
@@ -306,6 +274,5 @@
         </div>
      <?php endforeach; ?>
 
- </div pad>
 @stop
 

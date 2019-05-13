@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 Route::get('/teste','GraficoController@ultimosdados');
 Route::post('/grafico', 'GraficoController@teste');
-//Route::get('/teste2', function () {
-//    return view('teste');
-//});
+Route::get('/chart', function () {
+    return view('charts');
+});
+
+Route::post('/chart','GraficoController@ultimosdados')->name('chartz');

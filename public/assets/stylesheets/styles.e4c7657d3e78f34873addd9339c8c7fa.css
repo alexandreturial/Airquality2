@@ -4004,6 +4004,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eee;
+  background-color: #eee;
   border-color: #337ab7;
 }
 .nav .nav-divider {
@@ -4492,8 +4493,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
   }
 }
+.sidebar-dark .nav-item .nav-link {
+  color: #f8f9fc;
+}
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: #f7f6fb;
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {

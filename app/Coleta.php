@@ -53,7 +53,7 @@ class Coleta extends Model
 
     public static function teste(){
         $dados = DB::table('coleta')->orderBy('id','DESC')->limit(1)->get();
-            return $dados;
+            return view('home', compact('dados')) ;
     }
 
 }

@@ -56,9 +56,7 @@ class GraficoController extends Controller
     }
 
     public function ultimosdados(){
-
         $dados= Coleta::teste();
-
-        return view('home', compact('dados'));
+        return view('charts', compact('dados'));
     }
 }
